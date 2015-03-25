@@ -35,13 +35,12 @@ public class MainActivity extends ActionBarActivity {
 
     private void montArrayList(){
         for (int i = 0; i < 300; i++) {
-            mListTablet.add("Mesa " + i);
+            mListTablet.add(getString(R.string.tablet) + " " + i);
         }
         setResultAdapter(mListTablet);
     }
 
     private void setResultAdapter(ArrayList<String> listTablet){
-
         TabletAdapter adapter = new TabletAdapter(listTablet);
         adapter.setOnItemClickListener(onItemClick);
         mRecyclerView.setAdapter(adapter);
